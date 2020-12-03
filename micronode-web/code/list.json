@@ -1,0 +1,5 @@
+{
+    "blink.js": "Blink the GPIO-4 for demo by JS.",
+    "minist.js": "Handwritten digit recognition app.",
+    "rpc.js": "Micronode RPC demo."
+}
