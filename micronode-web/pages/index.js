@@ -25,13 +25,6 @@ export default function Home({ codeList }) {
             <JsCodeBlock key={key} name={key} description={value}>
             </JsCodeBlock>
           ))}
-
-          {/* <JsCodeBlock name='blink.js' descript='Blink the GPIO-4 for demo by JS.'>
-          </JsCodeBlock>
-
-          <JsCodeBlock name='minist.js' descript='Handwritten digit recognition app.'>
-          </JsCodeBlock> */}
-
         </div>
       </main>
 

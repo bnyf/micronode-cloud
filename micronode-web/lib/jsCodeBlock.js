@@ -8,6 +8,7 @@ const fetcher = (name) => fetch(url + name).then(
 );
 
 export default function JsCodeBlock({ name, description }) {
+    console.log(url);
     return (
         <button className={styles.card} onClick={()=>fetcher(name)}>
             <h3>{name} &darr;</h3>

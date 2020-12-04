@@ -1,1 +1,28 @@
 version: "3"
+
+services:
+  micronode-web:
+    image: node:15
+    container_name: MICRONODE-WEB
+    ports: 
+      - 3000:3000
+    volumes:
+      - ${HOMEDIR}/micronode-web:/usr/micronode-web
+    working_dir: /usr/micronode-web
+    links:
+      - mosquitto
+    entrypoint: 
+      - bash
+      - -c
+      - "npm run build & npm start"
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: MQTT-SERVER
+    ports:
+      - 1883:1883 
+      - 9001:9001
+    volumes: 
+      - ${HOMEDIR}/conf.d/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ${HOMEDIR}/data/mosquitto:/mosquitto/data
+      - ${HOMEDIR}/logs/mosquitto:/mosquitto/log
