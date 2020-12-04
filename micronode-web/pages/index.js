@@ -22,7 +22,7 @@ export default function Home({ codeList }) {
 
         <div className={styles.grid}>
           {Object.entries(codeList).map(([key, value]) => (
-            <JsCodeBlock name={key} description={value}>
+            <JsCodeBlock key={key} name={key} description={value}>
             </JsCodeBlock>
           ))}
 
