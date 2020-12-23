@@ -1,1 +1,1 @@
-micronode-cloud is the cloud services of micronode.js for edge-computing.
+Micronode-cloud is a cloud service of micronode.js for edge-computing.
